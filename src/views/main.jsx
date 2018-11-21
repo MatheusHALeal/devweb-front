@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
 import MySidebar from '../components/sidebar/Sidebar.jsx';
 import MyNavbar from '../components/navbar/Navbar.jsx';
-import MyCardGroup from '../components/card/CardGroup.jsx';
+import MyTab from '../components/tab/Tab.jsx';
+import {Container} from 'semantic-ui-react';
+
+import './main.css';
+
 class App extends Component {
   render() {
     return (
 
       <div>
         <MyNavbar/>
-        <MySidebar/>
-        <MyCardGroup/>
+
+        <Container>
+          <MyTab/>
+        </Container>
+
+
+
+
       </div>
 
     );

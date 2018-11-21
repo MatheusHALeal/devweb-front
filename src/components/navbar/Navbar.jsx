@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Menu, Segment, Item, Button, Input} from 'semantic-ui-react';
-
+import './navbar.css'
 class MyNavbar extends Component {
 
   state = { activeItem: 'home' }
@@ -11,19 +11,32 @@ class MyNavbar extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu inverted size='large'>
-        <Menu.Menu position='right'>
-          <Menu.Item>
-            <Input icon={{ name: 'search', circular: true, link: true }} placeholder='Search...' />
+      <Segment inverted>
+        <Menu inverted pointing secondary>
+          <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+          <Menu.Item
+            name='meus eventos'
+            active={activeItem === 'meus eventos'}
+            onClick={this.handleItemClick}
+
+          />
+          <Menu.Item
+            name='tenho interesse'
+            active={activeItem === 'tenho interesse'}
+            onClick={this.handleItemClick}
+          />
+
+          <Menu.Item position='right' >
+                  <Input  fluid icon='search' placeholder='Search...' />
           </Menu.Item>
-          <Menu.Item position='right'>
-            <Button secondary>Sign Up</Button>
-          </Menu.Item>
-        </Menu.Menu>
-      </Menu>
+        </Menu>
+      </Segment>
+
+
+
+
     )
   }
-
 
 
 }
