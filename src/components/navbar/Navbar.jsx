@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Menu, Segment, Item, Button, Input} from 'semantic-ui-react';
+import {Menu, Segment, Item, Button, Input, Image} from 'semantic-ui-react';
 import './navbar.css'
 class MyNavbar extends Component {
 
@@ -13,6 +13,9 @@ class MyNavbar extends Component {
     return (
       <Segment inverted>
         <Menu inverted pointing secondary>
+          <Menu.Item position='left' fluid>
+            <Image src = "https://image.ibb.co/hdRb5V/Imagem1.png" size="tiny"/>
+          </Menu.Item>
           <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
           <Menu.Item
             name='meus eventos'

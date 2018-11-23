@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MySidebar from '../components/sidebar/Sidebar.jsx';
 import MyNavbar from '../components/navbar/Navbar.jsx';
 import MyTab from '../components/tab/Tab.jsx';
 import {Container} from 'semantic-ui-react';
@@ -12,7 +11,6 @@ class App extends Component {
 
       <div>
         <MyNavbar/>
-
         <Container>
           <MyTab/>
         </Container>
