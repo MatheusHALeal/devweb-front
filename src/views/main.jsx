@@ -6,13 +6,26 @@ import {Container} from 'semantic-ui-react';
 import './main.css';
 
 class App extends Component {
+
+  constructor(props) {
+      super(props);
+      this.state = {
+          events: []
+      }
+  }
+
+  search = event => {
+    this.setState({ events: this.state.events.push(event)});
+  }
+
   render() {
+    const { events } = this.state;
     return (
 
       <div>
-        <MyNavbar/>
+        <MyNavbar events={this.state.events} onChange={this.search} />
         <Container>
-          <MyTab/>
+          <MyTab events={this.state.events}/>
         </Container>
 
 
