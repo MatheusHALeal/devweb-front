@@ -6,15 +6,12 @@ class MyTab extends Component{
 
   constructor(props) {
       super(props);
-      this.state = {
-          events: props.events
-      }
   }
 
   render() {
     return (
       <Tab panes={[
-          {menuItem: 'Eventos', render: () => <MyCardGroup events = {this.state.events}/>},
+          {menuItem: 'Eventos', render: () => <MyCardGroup events = {this.props.events}/>},
           { menuItem: 'Restaurantes', render: () => <MyCardGroup/> },
         ]}/ >
     )

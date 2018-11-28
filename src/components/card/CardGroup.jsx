@@ -7,27 +7,20 @@ class MyCardGroup extends Component {
 
   constructor(props) {
       super(props);
-      this.state = {
-          events: props.events
-      }
   }
 
 
   render() {
 
-    if (this.state.events) {
-      if (this.state.events[0] !== undefined) {
-        console.log(this.state.events[0]);
+    if (this.props.events) {
         return (
           <Card.Group centered className="CardGroup">
-            {this.state.events[0].map((event, i) => (
+            {this.props.events.map((event, i) => (
                 <MyCard key={i} event={event}></MyCard>
             )
             )}
           </Card.Group>
         )
-      }
-
 
     }
     return null;

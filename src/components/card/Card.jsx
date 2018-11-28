@@ -16,11 +16,11 @@ class MyCard extends Component {
     return (
       <Card >
         <MyModal/>
-        <Image src='https://media-cdn.tripadvisor.com/media/photo-s/0e/52/e4/d4/restauran.jpg' />
+        <Image src={this.props.event.image} />
         <Card.Content>
           <Card.Header>{this.props.event.title}</Card.Header>
-          <Card.Meta>{this.props.event.title}</Card.Meta>
-          <Card.Description>Um restaurante muito chique e caro</Card.Description>
+          <Card.Meta>{this.props.event.data}</Card.Meta>
+          <Card.Description>{this.props.event.description}</Card.Description>
         </Card.Content>
         <Card.Content extra>
           <a>
