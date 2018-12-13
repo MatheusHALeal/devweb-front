@@ -12,7 +12,6 @@ class MyCard extends Component {
   }
 
   render() {
-    console.log(this.state.event)
     return (
       <Card >
         <MyModal/>

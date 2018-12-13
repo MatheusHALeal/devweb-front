@@ -15,7 +15,6 @@ class App extends Component {
   }
 
   search = event => {
-    console.log(event);
     this.setState({ events: event});
   }
 
@@ -24,7 +23,7 @@ class App extends Component {
     return (
 
       <div>
-        <div>{events[0] && events[0].title}</div>
+        <div></div>
         <MyNavbar events={this.state.events} onChange={this.search} />
         <Container>
           <MyTab events={this.state.events}/>

@@ -18,8 +18,10 @@ class MyNavbar extends Component {
 
   refresh = async(query) => {
       Api.get('/search?city='+query).then((response) => {
+      console.log(response)
       const { onChange } = this.props;
       onChange(response.data.events);
+
     })
 
   }
