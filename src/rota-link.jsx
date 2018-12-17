@@ -3,9 +3,9 @@ import './semantic/dist/semantic.min.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import PrivateRoute from "./routes/private.jsx";
 import FirebaseConfig from './config/keys';
-import App from './views/main/main.jsx';
+import App from './views/Main/main.jsx';
 import Login from './views/Login';
-
+import NewEvent from './views/CreateEvent/createEvent.jsx';
 
 class RotaLink extends Component {
   state = { loading: true, authenticated: false, user: null };
@@ -33,14 +33,14 @@ class RotaLink extends Component {
     const { authenticated, loading } = this.state;
 
     if (loading) {
-      return <p>Loading..</p>;
+      return (<p>Loading..</p>);
     }
     return (
       <Router>
         <div>
           <Route exact path="/" component={App}/>
           <Route exact path="/login" component={Login} />
-          <PrivateRoute exact path="/myEvents" component={App} authenticated={authenticated}/>
+          <PrivateRoute exact path="/createEvent" component={NewEvent} authenticated={authenticated}/>
         </div>
         </Router>
     )

@@ -8,7 +8,8 @@ class MyNavbar extends Component {
   constructor() {
     super()
     this.state = {
-      searchValue: ''
+      searchValue: '',
+      activeItem: ''
     }
   }
 
@@ -28,8 +29,6 @@ class MyNavbar extends Component {
   }
 
 
-  state = { activeItem: 'home' }
-
   handleChange = (e, data) => {
     this.setState({searchValue: data.value})
   }
@@ -48,25 +47,40 @@ class MyNavbar extends Component {
     return (
       <Segment inverted>
         <Menu inverted pointing secondary>
+
           <Menu.Item position='left' fluid>
-            <Image src = "https://image.ibb.co/hdRb5V/Imagem1.png" size="tiny"/>
+            <Image src = "https://image.ibb.co/hdRb5V/Imagem1.png"
+              onClick={this.handleItemClick}
+              as={NavLink} to='/'
+              size="tiny"
+              />
           </Menu.Item>
-          <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+
+          <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} as={NavLink} to='/'/>
           <Menu.Item
             name='meus eventos'
             active={activeItem === 'meus eventos'}
             onClick={this.handleItemClick}
-            as={NavLink} to='/myEvents'
+            as={NavLink} to='/a'
           />
+
           <Menu.Item
             name='tenho interesse'
             active={activeItem === 'tenho interesse'}
             onClick={this.handleItemClick}
+            as={NavLink} to='/b'
           />
 
           <Menu.Item position='right' >
                   <Input  fluid icon='search' onChange={this.handleChange} onKeyPress = {this.handleSearch} placeholder='Search...'/>
           </Menu.Item>
+
+          <Menu.Item
+            name='novo evento'
+            active={activeItem === 'novo evento'}
+            onClick={this.handleItemClick}
+            as={NavLink} to='/createEvent'
+          />
         </Menu>
       </Segment>
 
