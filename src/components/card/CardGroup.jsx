@@ -1,15 +1,9 @@
 import React, {Component} from 'react'
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card} from 'semantic-ui-react'
 import MyCard from './Card.jsx';
 import './Card.css';
 
 class MyCardGroup extends Component {
-
-  constructor(props) {
-      super(props);
-  }
-
-
   render() {
 
     if (this.props.events) {

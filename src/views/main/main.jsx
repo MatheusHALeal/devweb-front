@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import MyNavbar from '../components/navbar/Navbar.jsx';
-import MyTab from '../components/tab/Tab.jsx';
+import MyNavbar from '../../components/navbar/Navbar.jsx';
+import MyTab from '../../components/tab/Tab.jsx';
 import {Container} from 'semantic-ui-react';
-
 import './main.css';
 
 class App extends Component {
@@ -13,11 +12,9 @@ class App extends Component {
           events: []
       }
   }
-
   search = event => {
     this.setState({ events: event});
   }
-
   render() {
     const { events } = this.state;
     return (
@@ -28,10 +25,6 @@ class App extends Component {
         <Container>
           <MyTab events={this.state.events}/>
         </Container>
-
-
-
-
       </div>
 
     );

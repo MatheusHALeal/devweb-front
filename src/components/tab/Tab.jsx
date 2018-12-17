@@ -4,9 +4,6 @@ import MyCardGroup from '../card/CardGroup.jsx';
 
 class MyTab extends Component{
 
-  constructor(props) {
-      super(props);
-  }
 
   render() {
     return (

@@ -1,21 +1,20 @@
-import App from '../views/main.jsx'
-
+// import App from '../views/main/main.jsx'
+// import Login from '../views/login.jsx'
 var mainRoutes = [
-  {
-    path: "/home",
-    name: "Home",
-    icon: "",
-    component: App
-  },
-  {
-    path: "/myEvents",
-    name: "Meus Eventos",
-    component: App
-  }
 
-  { redirect: true, path: "/", pathTo: "/home", name: "Home" }
+
+  // {
+  //   path: "/home",
+  //   name: "Home",
+  //   icon: "",
+  //   component: App
+  // },
+  // {
+  //   path: "/login",
+  //   name: "Entrar",
+  //   component: Login
+  // }
 
 
 ];
-
 export default mainRoutes;

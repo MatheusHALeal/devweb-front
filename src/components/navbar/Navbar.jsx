@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {Menu, Segment, Item, Button, Input, Image} from 'semantic-ui-react';
+import {Menu, Segment, Input, Image} from 'semantic-ui-react';
 import { Api } from '../../Api';
 import './navbar.css'
+import { NavLink } from "react-router-dom";
 class MyNavbar extends Component {
 
   constructor() {
@@ -34,7 +35,7 @@ class MyNavbar extends Component {
   }
 
   handleSearch = (event) => {
-    if (event.key == "Enter") {
+    if (event.key === "Enter") {
       this.refresh(this.state.searchValue)
     }
   }
@@ -55,7 +56,7 @@ class MyNavbar extends Component {
             name='meus eventos'
             active={activeItem === 'meus eventos'}
             onClick={this.handleItemClick}
-
+            as={NavLink} to='/myEvents'
           />
           <Menu.Item
             name='tenho interesse'
